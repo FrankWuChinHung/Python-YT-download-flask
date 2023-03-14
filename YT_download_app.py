@@ -2,9 +2,6 @@ from flask import Flask
 from flask import render_template, request
 from pytube import YouTube
 from moviepy.editor import VideoFileClip
-#import requests
-#from jinja2 import download
-#from markupsafe import download
 
 app = Flask(__name__)
 
@@ -23,8 +20,7 @@ def download():
     YT = YouTube(url)
 
     filename = YT.title
-    filename = filename.replace('|', '').replace('?', '').replace(
-        '*', '').replace('<', '').replace('>', '')
+    filename = filename.replace('|', '').replace('?', '').replace('*', '').replace('<', '').replace('>', '')
     authorname = YT.author
     ytlength = YT.length
 
