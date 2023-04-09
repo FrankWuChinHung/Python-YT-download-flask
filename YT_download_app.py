@@ -38,12 +38,20 @@ def download():
         results.first().download(filename=filename)
         clip = VideoFileClip(filename)
         clip.audio.write_audiofile(filename[:] + ".mp3")
-        return f"MP3下載完成。_____名稱: {filename}.mp3_____作者: {authorname}_____影片時長: {ytlength}秒"
+        message = f"MP3 download complete !"
+        message1 = f"Filename : {filename}.mp3"
+        message2 = f"Authorname : {authorname}"
+        message3 = f"Length : {ytlength}s"
 
     elif format == "mp4":
         YT.streams.filter().get_highest_resolution().download(filename=filename+".mp4")
-        return f"MP4下載完成。_____名稱: {filename}.mp4_____作者: {authorname}_____影片時長: {ytlength}秒"
-
+        message = f"MP4 download complete !"
+        message1 = f"Filename : {filename}.mp4"
+        message2 = f"Authorname : {authorname}"
+        message3 = f"Length : {ytlength}s"
+        
+# 當使用者提交下載表單時，應用程式會執行路由 "/download"，獲取輸入的影片 URL 和下載格式，並進入一個 HTML 模板 "download.html"。        
+    return render_template("download.html", message=message, message1=message1, message2=message2, message3=message3)
 
 if __name__ == "__main__":
     app.debug = True
