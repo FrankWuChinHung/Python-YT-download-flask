@@ -4,7 +4,7 @@
 
 以下是.py檔案與.html檔案的目錄位置
 
-C:\Users(使用者)\your computer name (例如Frank)\WEB_APP
+C:\Users(使用者)\your computer name (例如Frank)\WEB_APP(自訂)
 
   YT_download_app.py
   
