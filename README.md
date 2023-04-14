@@ -12,11 +12,13 @@ C:\Users(使用者)\your computer name (例如Frank)\WEB_APP
   
   static
   
+  
 C:\Users\Frank\WEB_APP\templates
 
   index.html
   
   download.html
+
 
 C:\Users\Frank\WEB_APP\static
 
