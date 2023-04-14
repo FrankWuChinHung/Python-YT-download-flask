@@ -7,16 +7,20 @@
 C:\Users(使用者)\your computer name (例如Frank)\WEB_APP
 
   YT_download_app.py
+  
   templates
+  
   static
   
 C:\Users\Frank\WEB_APP\templates
 
   index.html
+  
   download.html
 
 C:\Users\Frank\WEB_APP\static
 
   bootstrap.min.css
+  
   bootstrap.min.js
   
