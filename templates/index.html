@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Downloader</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <style>
+        div {
+            text-align: center;
+            padding: 20px;
+            margin: auto;
+        }
+
+        .st1 {
+            text-align: center;
+            padding: 50px;
+            border: 6px double gold;
+            border-radius: 20px;
+            box-shadow: 10px 10px 10px gray;
+            width: 1000px;
+        }
+
+        body {
+            background-color: rgb(255, 247, 230);
+        }
+    </style>
+</head>
+
+<body>
+    <div class='st1'>
+        <h1>YouTube Downloader</h1><br><br>
+
+        <div class="mb-3">
+            <form method="POST" action="/download">
+                <label for="url" class="form-label">YouTube URL:</label>
+                <input type="text" class="form-control" name="url" id="url" placeholder="URL input" size="80"><br><br>
+                <label for="format">Choose your format:</label>
+                <select name="format" id="format">
+                    <option value="mp3">MP3</option>
+                    <option value="mp4">MP4</option>
+                </select><br><br>
+                <input type="submit" class="btn btn-primary" value="Download">
+        </div>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+
+</html>
+
+<!-- 這是一個HTML模板，用來呈現下載YouTube影片或聲音的頁面，使用了Bootstrap框架來設計畫面風格。
+    
+其中，<head>標籤內設定了網頁的標題、編碼方式、頁面檢視大小及Bootstrap框架CSS檔案的連結，並定義了一些樣式（CSS）。
+
+<body>標籤內容是顯示在網頁中的主要內容。這個模板有一個標題 "YouTube Downloader"，並使用Bootstrap樣式設計一個帶邊框和陰影的區塊作為表單。
+
+表單中有一個輸入框（input）和下拉式選單（select），用來輸入YouTube影片的URL和選擇下載的格式（mp3或mp4），並使用一個提交按鈕（input type="submit"）來啟動表單提交事件。
+
+最後，<script>標籤連結Bootstrap框架的JavaScript檔案，用來實現網頁的一些交互效果。 -->
