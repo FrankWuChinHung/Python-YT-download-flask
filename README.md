@@ -6,18 +6,17 @@
 
 C:\Users(使用者)\your computer name (例如Frank)\WEB_APP
 
-WEB_APP >
   YT_download_app.py
   templates
   static
   
 C:\Users\Frank\WEB_APP\templates
-templates >
+
   index.html
   download.html
 
 C:\Users\Frank\WEB_APP\static
-static >
+
   bootstrap.min.css
   bootstrap.min.js
   
