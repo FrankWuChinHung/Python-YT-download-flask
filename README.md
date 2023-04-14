@@ -22,7 +22,7 @@ C:\Users\Frank\WEB_APP\templates
 
 C:\Users\Frank\WEB_APP\static
 
-  bootstrap.min.css
+  css
   
-  bootstrap.min.js
+  js
   
