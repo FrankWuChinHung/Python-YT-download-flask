@@ -22,8 +22,18 @@ def download():
     format = request.form["format"]
 
     YT = YouTube(url)
-
-    filename = YT.title
+    
+    # 新版本
+    # 取得影片 stream，progressive=True：只取得具有進階下載功能的串流物件，file_extension = "mp4"：只取得檔案副檔名為 mp4 的串流物件
+    video_streams = YT.streams.filter(progressive=True, file_extension="mp4")
+    # 選擇最高畫質的 stream
+    video_stream = video_streams.get_highest_resolution()
+    # 取得影片標題
+    filename = video_stream.title
+    
+    # 舊版本
+    # filename = YT.title
+    
     filename = filename.replace('|', '').replace('?', '').replace(
         '*', '').replace('<', '').replace('>', '')
     authorname = YT.author
@@ -54,9 +64,7 @@ def download():
     return render_template("download.html", message=message, message1=message1, message2=message2, message3=message3)
 
 if __name__ == "__main__":
-    app.debug = True
-    app.run(host='0.0.0.0',
-            port=5000)
+    app.run(debug=True, host='0.0.0.0', port=5000)
 
 """
 在程式中，以下是特別值得注意的幾點：
